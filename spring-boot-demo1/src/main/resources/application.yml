@@ -1,0 +1,23 @@
+spring:
+  profiles:
+    active: dev
+
+management:
+  server:
+    port: 9001
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+my:
+  name: fjt
+  age: 18
+  number: ${random.int}
+  uuid: ${random.uuid}
+  max: ${random.int(10)}
+  value: ${random.value}
+  greeting: Hi,I'm ${my.name}
